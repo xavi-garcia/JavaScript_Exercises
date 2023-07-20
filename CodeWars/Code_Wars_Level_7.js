@@ -143,3 +143,93 @@
 // isIsogram("isogram")
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// Sentence Smash
+// Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. 
+//You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+// Example
+// ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+
+// function smash (words) {
+//     console.log(words.toString().replaceAll(",", " "))
+// };
+
+// const smash = words => words.toString().replaceAll(",", " ")
+// const smash = words => console.log(words.join(' '))
+// smash(['hello', 'world', 'this', 'is', 'great'])
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// function findNeedle(haystack) {
+//     let needle = haystack.map(word => word === "needle" ? console.log(`found the needle at position ${haystack.indexOf("needle")}`): false)
+// }
+// findNeedle([1,2,3,4,5,6,7,8,8,7,5,4,3,4,5,6,67,5,5,3,3,4,2,34,234,23,4,234,324,324,'needle',1,2,3,4,5,5,6,5,4,32,3,45,54])
+
+// function findNeedle(haystack) {
+//     haystack.find(w => w === "needle")
+//       return `found the needle at position ${haystack.indexOf("needle")}`
+    
+//  }
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// Write a function that accepts an integer n and a string s as parameters, 
+//and returns a string of s repeated exactly n times.
+
+// Examples (input -> output)
+// 6, "I"     -> "IIIIII"
+// 5, "Hello" -> "HelloHelloHelloHelloHello"
+
+// function repeatStr (n, s) {
+//     console.log(s.repeat(n)) 
+// }
+
+// repeatStr(6, "I")
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//The Cat In The Hat has cat A under his hat, cat A has cat B under his hat and so on until Z
+//The Cat In The Hat is 2,000,000 cat units tall.
+//Each cat is 2.5 times bigger than the cat underneath their hat.
+//Find the total height of the cats if they are standing on top of one another.
+//Counting starts from the Cat In The Hat
+//n = the number of cats
+//fix to 3 decimal places.
+
+// function height(n) {
+//     let catHat = 2000000;
+//     let result = 0
+//     for(let i = 0; i <= n; i++){
+//         result += catHat / 2.5 ** i;
+//     }
+//     return result.toFixed(3)
+// }
+
+// height(7)
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//Make a program that filters a list of strings and returns a list with only your friends name in it.
+//If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+//Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+//i.e.
+//friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+//Note: keep the original order of the names in the output.
+
+// function friend(friends){
+//     return friends.filter(name => name.length == 4)
+// }
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+//Let's build a calculator that can calculate the average for an arbitrary number of arguments.
+//The test expects you to provide a Calculator object with an average method:
+//Calculator.average()
+//The test also expects that when you pass no arguments, it returns 0. The arguments are expected to be integers.
+//It expects Calculator.average(3,4,5) to return 4.
+
+
+var Calculator = {
+    average: function(...numbers) {
+        let calculate = numbers.reduce((acc, curr) => acc + curr, 0);
+        return numbers.length == 0 ? 0 : calculate / numbers.length   
+    }
+};

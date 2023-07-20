@@ -34,7 +34,9 @@ console.log(a); // Output: 5
 //The value of a is copied and stored in the num variable within the function. 
 //The num variable is then doubled and returned. However, the original value of a remains unchanged because it was passed by value.
 
-//On the other hand, passed by reference means that when a parameter is passed to a function, a reference to that value is passed instead of a copy. This reference points to the location of the original value and any changes made to it within the function will affect the original value as well.
+//On the other hand, passed by reference means that when a parameter is passed to a function, 
+//a reference to that value is passed instead of a copy. T
+//his reference points to the location of the original value and any changes made to it within the function will affect the original value as well.
 
 function changeName(obj) {
     obj.name = "Sarah";
